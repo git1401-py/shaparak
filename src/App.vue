@@ -1,22 +1,28 @@
 <template>
   <top-header />
-  <navbar />
-  <div id="nav">
-    <router-link to="/">kkk</router-link> |
-    <router-link to="/about">About</router-link>
+
+  <div class="container-fluid bg-primary">
+    <div class="container">
+      <div id="nav" class="text-end">
+        <router-link class="mynav-item" to="/">برگ نخست</router-link>
+        <router-link class="mynav-item" to="/about">درباره ما</router-link>
+        <router-link class="mynav-item" to="/contactus">تماس با ما</router-link>
+        <router-link class="mynav-item" to="/sugestion"
+          >انتقادات و پیشنهادات</router-link
+        >
+      </div>
+    </div>
   </div>
+
   <router-view />
 </template>
 
 <script>
-import TopHeader from './components/header/TopHeader.vue'
-import Navbar from './components/header/Navbar.vue'
-export default{
-  components:{TopHeader,Navbar},
-  setup() {
-    
-  },
-}
+import TopHeader from "./components/header/TopHeader.vue";
+export default {
+  components: { TopHeader },
+  setup() {},
+};
 </script>
 
 <style lang="scss">
@@ -25,7 +31,7 @@ export default{
 
 // colors
 // $primary: #00adb5;
-$success:rgb(7, 150, 7);
+$success: rgb(7, 150, 7);
 $secondary: #ccc;
 // $body-bg: #eef1f7;
 $text-body: rgb(24, 19, 19);
@@ -65,15 +71,20 @@ $list-group-action-color: #bbb;
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #bfcfdf;
+    padding: 12px 5%;
+    text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: rgb(254, 254, 255);
     }
+  }
+  a:hover {
+    background: rgb(10, 84, 243);
   }
 }
 </style>
