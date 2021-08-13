@@ -2,15 +2,13 @@
   <top-header />
 
   <div class="container-fluid bg-primary">
-    <div class="container">
-      <div id="nav" class="text-end">
-        <router-link class="mynav-item" to="/">برگ نخست</router-link>
-        <router-link class="mynav-item" to="/about">درباره ما</router-link>
-        <router-link class="mynav-item" to="/contactus">تماس با ما</router-link>
-        <router-link class="mynav-item" to="/sugestion"
-          >انتقادات و پیشنهادات</router-link
-        >
-      </div>
+    <div id="nav" class="text-end">
+      <router-link class="mynav-item" to="/">برگ نخست</router-link>
+      <router-link class="mynav-item" to="/about">درباره ما</router-link>
+      <router-link class="mynav-item" to="/contactus">تماس با ما</router-link>
+      <router-link class="mynav-item" to="/sugestion"
+        >انتقادات و پیشنهادات</router-link
+      >
     </div>
   </div>
 
@@ -62,25 +60,26 @@ $list-group-hover-bg: #444;
 $list-group-action-color: #bbb;
 
 @import "node_modules/bootstrap/scss/bootstrap";
+
+.bg-lightgray {
+  background: #ccc;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
 
 #nav {
-  padding: 10px;
+  padding: 10px 0;
 
   a {
-    font-weight: bold;
-    color: #bfcfdf;
-    padding: 12px 5%;
+    color: #f0f3f5;
+    padding: 11px 3%;
     text-decoration: none;
 
     &.router-link-exact-active {
-      color: rgb(254, 254, 255);
+      color: #fff;
+      font-weight: bold;
     }
   }
   a:hover {
