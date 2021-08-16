@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid p-0" style="background: #eee">
-    <div class="row p-5">
-      <div class="col-4">
+    <div class="row p-4">
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-sm-3 mt-md-3">
         <div class="card h-100">
-          <div class="card-body">
+          <div class="card-body position-relative">
             <a href="" v-for="newe in newestNews" :key="newe.id">
               <img
                 class="card-img-top mt-3"
@@ -11,6 +11,16 @@
                 style="width: 90%"
                 alt=""
               />
+              <span
+                class="bg-danger text-light px-1"
+                style="
+                  position: absolute;
+                  top: 35px;
+                  right: 35px;
+                  border-radius: 5px;
+                "
+                >جدید</span
+              >
               <div class="card-body text-end mt-3">
                 <p class="text-muted small mb-0" style="text-align: justify">
                   {{ newe.txt }}
@@ -24,7 +34,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-sm-3 mt-md-3">
         <div class="card h-100">
           <div
             class="card-body"
@@ -37,7 +47,7 @@
                 @mouseout="sidebar1 = false"
                 class="mt-4 link_hover"
               >
-              <a
+                <a
                   href=""
                   class="row a_hover"
                   :class="{ bg_hover: hover & !sidebar1 }"
@@ -111,7 +121,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-sm-12 col-md-12 col-lg-4 mb-sm-3 mt-md-3">
         <div class="card h-100">
           <div class="card-body position-relative pb-0">
             <ul class="breifNews p-3 m-0 pb-0">
