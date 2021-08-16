@@ -13,12 +13,14 @@
   </div>
 
   <router-view />
+  <footer-section />
 </template>
 
 <script>
+import FooterSection from "./components/footer/FooterSection.vue";
 import TopHeader from "./components/header/TopHeader.vue";
 export default {
-  components: { TopHeader },
+  components: { TopHeader, FooterSection },
   setup() {},
 };
 </script>
