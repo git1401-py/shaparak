@@ -1,8 +1,8 @@
 import { createStore } from "vuex";
+import news from "./modules/news.js";
 
 export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    news
+  }
 });

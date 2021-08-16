@@ -221,7 +221,7 @@
         <a href="" class="position-relative">
           <img src="../../../public/img/cartkhan.jpg" class="img-sid" alt="" />
           <div class="cartkhan">
-            <h5 class="text-light">راهنمای کد رهگیری مالیاتی</h5>
+            <h5 class="text-light txt-shadow">راهنمای کد رهگیری مالیاتی</h5>
           </div>
         </a>
       </div>
@@ -229,7 +229,7 @@
         <a href="" class="text-decoration-none">
           <div class="appchek img-sid">
             <!-- <img src="../../../public/img/appchek.jpg" class="img-sid" alt="" /> -->
-            <h4 class="appchek-txt">برنامک های طرح چک</h4>
+            <h4 class="appchek-txt txt-shadow">برنامک های طرح چک</h4>
           </div>
         </a>
       </div>
@@ -237,7 +237,7 @@
         <a href="" class="position-relative" style="top: 0">
           <img src="../../../public/img/estekhdam.jpg" class="img-sid" alt="" />
           <div class="estekhdam">
-            <h1 class="text-light text-center">دعوت به همکاری</h1>
+            <h1 class="text-light text-center txt-shadow">دعوت به همکاری</h1>
           </div>
         </a>
       </div>
@@ -356,6 +356,10 @@ export default {
   top: -60px;
   left: 0;
   background: rgba(4, 4, 4, 0.3);
+}
+.txt-shadow{
+  text-shadow: -2px -2px  rgb(52, 52, 109),
+  2px 2px  rgb(51, 51, 112);
 }
 .sidebar > div:hover::before {
   content: "";
