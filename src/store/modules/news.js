@@ -4,17 +4,22 @@ const news = {
   namespaced: true,
   state: {
     news: [],
-    recentnews: [],
+    recently: [],
+    newestNews: [],
+    threeRecently: [{},{},{}],
   },
   getters: {
     allNews(state) {
       return state.news;
     },
-    lengthArray(state) {
-      return state.news.length;
-    },
     recently(state) {
-      return state.recentnews;
+      return state.recently;
+    },
+    newestNews(state) {
+      return state.newestNews;
+    },
+    threeRecently(state) {
+      return state.threeRecently;
     },
   },
   mutations: {
@@ -22,23 +27,45 @@ const news = {
       state.news = news;
     },
     setresentnews(state, news) {
-      state.recentnews = news;
+      state.recently = news;
+    },
+    setnewestNews(state, news) {
+      state.newestNews = news;
+    },
+    setthreeRecently(state, news) {
+      state.threeRecently = news;
     },
   },
   actions: {
     async fetchNews({ commit }) {
-      const response = await axios.get("./json/news.json", {
-        headers: {
-          "Content-Type": "application/json; charset=UTF-8",
+      await axios
+        .get("./json/news.json", {
+          headers: {
+            "Content-Type": "application/json; charset=UTF-8",
 
-          Accept: "application/json",
-        },
-      });
-      commit("setnews", response.data);
-    },
-    recentNews({ commit }, news) {
-      const response = news.concat(news);
-      commit("setresentnews", response);
+            Accept: "application/json",
+          },
+        })
+        .then((response) => {
+          const recently = [];
+          response.data.forEach((element) => recently.push(element));
+          recently.splice(15, recently.length);
+          recently.splice(0, 4);
+          commit("setresentnews", recently);
+
+          const newestNews = [];
+          response.data.forEach((element) => newestNews.push(element));
+          newestNews.splice(1, newestNews.length);
+          commit("setnewestNews", newestNews);
+
+          const threeRecently = [];
+          response.data.forEach((element) => threeRecently.push(element));
+          threeRecently.shift(threeRecently[0]);
+          threeRecently.splice(3, threeRecently.length);
+          commit("setthreeRecently", threeRecently);
+        });
+
+      // commit("setnews", response.data);
     },
   },
 };

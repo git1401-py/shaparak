@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid p-0" style="background: #eee">
+  <div class="container-fluid p-0" style="background: #eee;">
     <div class="row p-4">
       <div class="col-sm-12 col-md-6 col-lg-4 mb-sm-3 mt-md-3">
         <div class="card h-100">
@@ -59,7 +59,7 @@
                       alt=""
                     />
                   </div>
-                  <div class="col-8 px-4">
+                  <div class="col-8 px-4 text-end">
                     <h6>{{ threeRecently[0].title }}</h6>
                     <p class="text-muted">
                       {{ threeRecently[0].date }}
@@ -84,7 +84,7 @@
                       alt=""
                     />
                   </div>
-                  <div class="col-8 px-4">
+                  <div class="col-8 px-4 text-end">
                     <h6>{{ threeRecently[1].title }}</h6>
                     <p class="text-muted">
                       {{ threeRecently[1].date }}
@@ -109,7 +109,7 @@
                       alt=""
                     />
                   </div>
-                  <div class="col-8 px-4">
+                  <div class="col-8 px-4 text-end">
                     <h6>{{ threeRecently[2].title }}</h6>
                     <p class="text-muted">
                       {{ threeRecently[2].date }}
@@ -167,21 +167,23 @@ export default {
     const store = useStore();
 
     fetchNews();
-    const news = computed(() => store.getters["news/allNews"]);
+    const recently = computed(() => store.getters["news/recently"]);
+    const newestNews = computed(() => store.getters["news/newestNews"]);
+    const threeRecently = computed(() => store.getters["news/threeRecently"]);
+    // const news = computed(() => store.getters["news/allNews"]);
+    // const recently = ref([]);
+    // news.value.forEach((element) => recently.value.push(element));
+    // recently.value.splice(15, recently.value.length);
+    // recently.value.splice(0, 4);
 
-    const recently = ref([]);
-    news.value.forEach((element) => recently.value.push(element));
-    recently.value.splice(15, recently.value.length);
-    recently.value.splice(0, 4);
+    // const newestNews = ref([]);
+    // news.value.forEach((element) => newestNews.value.push(element));
+    // newestNews.value.splice(1, newestNews.value.length);
 
-    const newestNews = ref([]);
-    news.value.forEach((element) => newestNews.value.push(element));
-    newestNews.value.splice(1, newestNews.value.length);
-
-    const threeRecently = ref([]);
-    news.value.forEach((element) => threeRecently.value.push(element));
-    threeRecently.value.shift(recently.value[0]);
-    threeRecently.value.splice(3, threeRecently.value.length);
+    // const threeRecently = ref([{},{},{}]);
+    // news.value.forEach((element) => threeRecently.value.push(element));
+    // threeRecently.value.shift(recently.value[0]);
+    // threeRecently.value.splice(3, threeRecently.value.length);
 
     async function fetchNews() {
       // loading.value = true;

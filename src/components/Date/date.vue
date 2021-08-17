@@ -1,14 +1,18 @@
 <template>
   <div class="">
     <!-- <div>{{ $filter.moment(new Date(), "jYYYY/jMMMM/dddd") }}</div> -->
-    
+
     <div v-show="false">
       {{ (year = $filter.moment(new Date(), "jYYYY")) }}
       {{ (mounthH = $filter.moment(new Date(), "jMMMM")) }}
       {{ (dayHE = $filter.moment(new Date(), "dddd")) }}
       {{ (dayA = $filter.moment(new Date(), "DD")) }}
     </div>
-    <label>{{ dayHF }} {{ DD }} {{ mounthA }} {{ year }}</label>
+    <span class="num-font"></span>
+    <label>
+      {{ dayHF }} <span class="num-font">{{ DD }}</span> {{ mounthA }}
+      <span class="num-font">{{ year }}</span>
+    </label>
   </div>
 </template>
 

@@ -357,7 +357,17 @@ export default {
   left: 0;
   background: rgba(4, 4, 4, 0.3);
 }
+@font-face {
+  font-family: "Far.Tawfig Outline";
+  font-weight: bold;
+  src: local("Far.Tawfig Outline"),
+    url("../../assets/fonts/Far.Tawfig Outline.ttf") format("truetype");
+}
+
+
 .txt-shadow{
+  /* font-family: "Far.Tawfig Outline" !important; */
+
   text-shadow: -2px -2px  rgb(52, 52, 109),
   2px 2px  rgb(51, 51, 112);
 }

@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Vazir";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: url("./assets/fonts/Vazir.eot");
+  /* IE9 Compat Modes */
+  src: local("Vazir"),
+    url("./assets/fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/Vazir.woff2") format("woff2"),
+    url("./assets/fonts/Vazir.woff") format("woff"),
+    url("./assets/fonts/Vazir.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}

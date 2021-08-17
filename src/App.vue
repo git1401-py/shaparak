@@ -26,51 +26,43 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Markazi+Text&family=Rajdhani:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Molengo&display=swap");
-
-// colors
-// $primary: #00adb5;
-$success: rgb(7, 150, 7);
-$secondary: #ccc;
-// $body-bg: #eef1f7;
-$text-body: rgb(24, 19, 19);
-$body-color: $text-body;
-$border-radius: 8px;
-
-//overrides
-
-$font-family-brand: "Rajdhani", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-base: "Markazi Text", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol";
-
-$headings-font-family: $font-family-brand;
-$headings-font-weight: 400;
-$line-height-headings: 1.4;
-
-$base-font-family: $font-family-base;
-$base-font-weight: 400;
-$line-height-base: 1.4;
-
-$list-group-active-bg: #222;
-$list-group-bg: transparent;
-$list-group-border-radius: 0;
-$list-group-hover-bg: #444;
-$list-group-action-color: #bbb;
-
-@import "node_modules/bootstrap/scss/bootstrap";
-
+@font-face {
+  font-family: "Far.Ketab";
+  font-weight: bold;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  // src: url("./assets/fonts/Sahel.eot");
+  /* IE9 Compat Modes */
+  src: local("Far.Ketab"),
+    // url("./assets/fonts/Sahel.eot?#iefix") format("embedded-opentype"),
+    // url("./assets/fonts/Sahel.woff2") format("woff2"),
+    // url("./assets/fonts/Sahel.woff") format("woff"),
+    url("./assets/fonts/Far.Ketab.ttf") format("truetype");
+  //   /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "Far.Yagut Bold";
+  font-weight: bold;
+  src: local("Far.Yagut Bold"),
+    url("./assets/fonts/Far.Yagut Bold.ttf") format("truetype");
+  //   /* Safari, Android, iOS */
+}
 .bg-lightgray {
   background: #ccc;
 }
 #app {
+  font-family: "Far.Ketab" !important;
+  
+  font-weight: bold;
+  // font-size: 1.3rem !important;;
+
   text-align: center;
   color: #2c3e50;
 }
-
+.num-font {
+  font-family: "Far.Yagut Bold" !important;
+}
 #nav {
   padding: 10px 0;
 
