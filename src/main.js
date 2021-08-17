@@ -18,9 +18,12 @@ import {
   faChevronRight,
   faSearch,
   faUserFriends,
-
 } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faTwitter, faSearchengin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faTwitter,
+  faSearchengin,
+} from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   fas,
@@ -34,9 +37,14 @@ library.add(
   faChevronRight,
   faSearchengin,
   faSearch,
-  faUserFriends,
-
+  faUserFriends
 );
+// import VueMoment from "vue-moment";
+// import moment from "moment-timezone";
 
-
-createApp(App).use(store).use(router).mount("#app");
+createApp(App)
+  .use(require("vue3-jalali-moment"))
+  
+  .use(store)
+  .use(router)
+  .mount("#app");

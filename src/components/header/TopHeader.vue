@@ -9,7 +9,10 @@
           <div class="col-6"></div>
           <div class="col-6 d-flex align-items-center justify-content-between">
             <img src="../../../public/img/parcham.png" alt="" />
-            پنج شنبه 21 مرداد 1400
+            
+<!-- <div>{{ $filter.moment("2021/12/8", "jYYYY/jMMMM/dddd") }}</div><hr/> -->
+            <date />
+            <!-- پنج شنبه 21 مرداد 140 -->
           </div>
         </div>
         <div class="row m-3 mx-0">
@@ -18,7 +21,7 @@
               <font-awesome-icon
                 class=""
                 :icon="['fa', 'user-friends']"
-                style="width: 12px;"
+                style="width: 12px"
               />
               امور اعضاء
             </div>
@@ -38,7 +41,7 @@
                 placeholder="جستجو"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
-                style="direction: rtl; background:#ccc;"
+                style="direction: rtl; background: #ccc"
               />
             </div>
           </div>
@@ -50,9 +53,19 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import date from "../Date/date.vue"
+import { ref } from '@vue/reactivity';
 
 export default {
-  components: { FontAwesomeIcon },
+  setup(){
+    const someDate = ref("");
+    someDate.value = "1400/11/11";
+    return{
+      someDate
+    }
+
+  },
+  components: { FontAwesomeIcon , date },
 };
 </script>
 
