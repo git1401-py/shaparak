@@ -27,18 +27,18 @@ export default {
 
 <style lang="scss">
 @font-face {
-  font-family: "Far.Ketab";
+  font-family: "B Araz";
   font-weight: bold;
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
   // src: url("./assets/fonts/Sahel.eot");
   /* IE9 Compat Modes */
-  src: local("Far.Ketab"),
+  src: local("B Araz"),
     // url("./assets/fonts/Sahel.eot?#iefix") format("embedded-opentype"),
     // url("./assets/fonts/Sahel.woff2") format("woff2"),
     // url("./assets/fonts/Sahel.woff") format("woff"),
-    url("./assets/fonts/Far.Ketab.ttf") format("truetype");
+    url("./assets/fonts/B Araz.ttf") format("truetype");
   //   /* Safari, Android, iOS */
 }
 @font-face {
@@ -52,7 +52,7 @@ export default {
   background: #ccc;
 }
 #app {
-  font-family: "Far.Ketab" !important;
+  font-family: "B Araz" !important;
   
   font-weight: bold;
   // font-size: 1.3rem !important;;

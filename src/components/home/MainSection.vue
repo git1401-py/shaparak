@@ -18,7 +18,7 @@
                 style="position: relative; z-index: 2"
                 :class="{ 'bg-gray': divhover, 'bg-lightgray': sidebar1 }"
               >
-                <a href="">
+                <router-link to="/componies">
                   <img
                     v-if="sidebar1"
                     src="./img/sidebar1.png"
@@ -32,7 +32,7 @@
                     class="py-4 card-img-top"
                     :class="{ imghover: divhover }"
                   />
-                </a>
+                </router-link>
                 <div
                   class="pb-4"
                   style="font-size: 13px"
@@ -51,7 +51,7 @@
                 style="position: relative; z-index: 2"
                 :class="{ 'bg-gray': divhover, 'bg-lightgray': sidebar2 }"
               >
-                <a href="">
+                <router-link to="/reports">
                   <img
                     v-if="sidebar2"
                     src="./img/sidebar2.png"
@@ -65,7 +65,7 @@
                     class="py-4 card-img-top"
                     :class="{ imghover: divhover }"
                   />
-                </a>
+                </router-link>
                 <div
                   class="pb-4"
                   style="font-size: 13px"
@@ -87,7 +87,7 @@
                 style="position: relative; z-index: 2"
                 :class="{ 'bg-gray': divhover, 'bg-lightgray': sidebar3 }"
               >
-                <a href="">
+                <router-link to="/network">
                   <img
                     v-if="sidebar3"
                     src="./img/sidebar3.png"
@@ -101,7 +101,7 @@
                     class="py-4 card-img-top"
                     :class="{ imghover: divhover }"
                   />
-                </a>
+                </router-link>
                 <div
                   class="pb-4"
                   style="font-size: 13px"
@@ -120,7 +120,7 @@
                 style="position: relative; z-index: 2"
                 :class="{ 'bg-gray': divhover, 'bg-lightgray': sidebar4 }"
               >
-                <a href="">
+                <router-link to="/accepteds">
                   <img
                     v-if="sidebar4"
                     src="./img/sidebar4.png"
@@ -134,7 +134,7 @@
                     class="py-4 card-img-top"
                     :class="{ imghover: divhover }"
                   />
-                </a>
+                </router-link>
                 <div
                   class="pb-4"
                   style="font-size: 13px"
@@ -155,7 +155,7 @@
                 style="position: relative; z-index: 2"
                 :class="{ 'bg-gray': divhover, 'bg-lightgray': sidebar5 }"
               >
-                <a href="">
+                <router-link to="/questions">
                   <img
                     v-if="sidebar5"
                     src="./img/sidebar5.png"
@@ -169,7 +169,7 @@
                     class="py-4 card-img-top"
                     :class="{ imghover: divhover }"
                   />
-                </a>
+                </router-link>
                 <div
                   class="pb-4"
                   style="font-size: 13px"
@@ -188,7 +188,7 @@
                 style="position: relative; z-index: 2"
                 :class="{ 'bg-gray': divhover, 'bg-lightgray': sidebar6 }"
               >
-                <a href="">
+                <router-link to="/articels">
                   <img
                     v-if="sidebar6"
                     src="./img/sidebar6.png"
@@ -202,7 +202,7 @@
                     class="py-4 card-img-top"
                     :class="{ imghover: divhover }"
                   />
-                </a>
+                </router-link>
                 <div
                   class="pb-4"
                   style="font-size: 13px"
@@ -364,12 +364,10 @@ export default {
     url("../../assets/fonts/Far.Tawfig Outline.ttf") format("truetype");
 }
 
-
-.txt-shadow{
+.txt-shadow {
   /* font-family: "Far.Tawfig Outline" !important; */
 
-  text-shadow: -2px -2px  rgb(52, 52, 109),
-  2px 2px  rgb(51, 51, 112);
+  text-shadow: -2px -2px rgb(52, 52, 109), 2px 2px rgb(51, 51, 112);
 }
 .sidebar > div:hover::before {
   content: "";

@@ -1,0 +1,119 @@
+[
+    {
+    "id":0,
+    "name": "پروتکل وب سرویسهای درخواست حواله الکترونیکی بین بانکی کارتی غیر حضوری (جهت پیاده سازی توسط بانک، موسسه اعتباری صادرکننده کارت) ",
+    "yearEdit": "",
+    "code": "SHP_INS_PISPBANKSYSWBSPROTOCOL",
+    "noskhe": "02.01",
+    "yearCreate": "99/06/14",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-sh-drkho-st-ho-lh-l-tron-b-n-b-n-rt-gh-r-hdor-ght-dh-s-z-tost-b-n-mossh-aatb-r-s-dr-nndh-rt?expires=1629268717&signature=6fdb14e045d6fbd060763b193f45b4fccc953df310bac6ecc286d4970362947c"
+},
+    {
+    "id":1,
+    "name": " پروتکل وب سرویسهای درخواست رمز یکبار مصرف جهت انجام تراکنش های غیر حضوری - جهت پیاده سازی توسط فن آوران مالی (پرداخت سازان) ",
+    "yearEdit": "",
+    "code": "SHP_INS_FINTECHOTPREQUEST",
+    "noskhe": " 00-03",
+    "yearCreate": "1399/10/23",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-sh-drkho-st-rmz-b-r-msrf-ght-ng-m-tr-nsh-h-gh-r-hdor-ght-dh-s-z-tost-fn-or-n-m-l-rd-kht-s-z-n?expires=1629268717&signature=55c055c5b69252a3fe43b9aaa72bc2471553c102de6540236a37a406e6375256"
+},
+    {
+    "id":2,
+    "name": "پروتکل وب سرویسهای درخواست رمز یکبار مصرف جهت انجام تراکنش های غیر حضوری - (جهت پیاده سازی توسط شرکت های ارائه دهنده خدمات پرداخت) ",
+    "yearEdit": "",
+    "code": "SHP_INS_PSPOTPREQUEST",
+    "noskhe": "02.00",
+    "yearCreate": "99/02/19",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-sh-drkho-st-rmz-b-r-msrf-ght-ng-m-tr-nsh-h-gh-r-hdor-ght-dh-s-z-tost-shr-t-h-r-h-dhndh-khdm-t-rd-kht?expires=1629268717&signature=d6dbd6ca9beb4b4dd5d34066b3ffcc0e1b6aa7466828c2768b03f6b2a0064eab"
+},
+    {
+    "id":3,
+    "name": " پروتکل وب سرویسهای درخواست حواله الکترونیکی بین بانکی کارتی غیر حضوری (جهت پیاده سازی توسط فن آوران مالی - متقاضیان پرداخت سازی) ",
+    "yearEdit": "",
+    "code": "SHP_INS_PISPTRANSFERWBSPROTOCOL",
+    "noskhe": "01.03",
+    "yearCreate": "98/08/21",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-sh-drkho-st-ho-lh-l-tron-b-n-b-n-rt-gh-r-hdor-ght-dh-s-z-tost-fn-or-n-m-l-mtk-d-n-rd-kht-s-z?expires=1629268717&signature=09d8025aeca406235b85cc993c6cff286db717543a1a2a2ec5f6a3c8daa4243a"
+},
+    {
+    "id":4,
+    "name": " پروتکل وب سرویس های ثبت و پیگیری درخواست های متقاضیان در سامانه جامع پذیرندگان توسط شرکت های پرداخت یار ",
+    "yearEdit": "",
+    "code": "SHP_INS_PFSYSWBSPROTOCOL",
+    "noskhe": "03.00",
+    "yearCreate": "99/11/26",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-s-h-thbt-o-r-drkho-st-h-mtk-d-n-dr-s-m-nh-g-maa-th-rnd-n-tost-shr-t-h-rd-kht-r?expires=1629268717&signature=4e74eeac19da3b6c33041a9cbe69f118a4366303b828febb57fa18e7bb19784e"
+},
+    {
+    "id":5,
+    "name": "پروتکل وب سرویسهای درخواست رمز یکبار مصرف جهت انجام تراکنش های غیر حضوری - (جهت پیاده سازی توسط شرکت های ارائه دهنده خدمات پرداخت) ",
+    "yearEdit": "",
+    "code": "SHP_INS_PSPOTPREQUEST",
+    "noskhe": " 02.00",
+    "yearCreate": "99/02/19",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-sh-drkho-st-rmz-b-r-msrf-ght-ng-m-tr-nsh-h-gh-r-hdor-ght-dh-s-z-tost-shr-t-h-r-h-dhndh-khdm-t-rd-kht?expires=1629268717&signature=d6dbd6ca9beb4b4dd5d34066b3ffcc0e1b6aa7466828c2768b03f6b2a0064eab"
+},
+    {
+    "id":6,
+    "name": " پروتکل وب سرویسهای درخواست حواله الکترونیکی بین بانکی کارتی غیر حضوری (جهت پیاده سازی توسط فن آوران مالی - متقاضیان پرداخت سازی) ",
+    "yearEdit": "",
+    "code": "SHP_INS_PISPTRANSFERWBSPROTOCOL",
+    "noskhe": "01.03",
+    "yearCreate": "98/08/21",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-sh-drkho-st-ho-lh-l-tron-b-n-b-n-rt-gh-r-hdor-ght-dh-s-z-tost-fn-or-n-m-l-mtk-d-n-rd-kht-s-z?expires=1629268717&signature=09d8025aeca406235b85cc993c6cff286db717543a1a2a2ec5f6a3c8daa4243a"
+},
+    {
+    "id":7,
+    "name": "پروتکل وب سرویس های ثبت و پیگیری درخواست های متقاضیان در سامانه جامع پذیرندگان توسط شرکت های پرداخت یار ",
+    "yearEdit": "",
+    "code": "SHP_INS_PFSYSWBSPROTOCOL",
+    "noskhe": "03.00",
+    "yearCreate": "99/11/26",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-s-h-thbt-o-r-drkho-st-h-mtk-d-n-dr-s-m-nh-g-maa-th-rnd-n-tost-shr-t-h-rd-kht-r?expires=1629268717&signature=4e74eeac19da3b6c33041a9cbe69f118a4366303b828febb57fa18e7bb19784e"
+},
+    {
+    "id":8,
+    "name": "پروتکل وب سرویس ثبت رمز یکبار مصرف مدیریت چک ارائه شده بر بستر USSD",
+    "yearEdit": "",
+    "code": "SHP_INS_CHQUSSDOTPPROTOCOL",
+    "noskhe": "01.00",
+    "yearCreate": "99/12/12",
+    "link": "https://www.shaparak.ir/files/tip/rot-l-ob-sro-s-thbt-rmz-b-r-msrf-md-r-t-r-h-shdh-br-bstr-ussd?expires=1629268717&signature=9c79474a05efa18970884697523e690ed08dee13521d1ff9061b855a1cd54198"
+},
+    {
+    "id":9,
+    "name": "راهنمای پرداخت یاری",
+    "yearEdit": "01.00",
+    "code": "SHP_STD_PFGUILDLINE",
+    "noskhe": "",
+    "yearCreate": "99/03/26",
+    "link": "https://www.shaparak.ir/files/tip/r-hnm-rd-kht-r?expires=1629268717&signature=19e66871078f41366853c4b2d506eac1d241478c08cfc245fb291be1ad5e2e51"
+},
+    {
+    "id":10,
+    "name": "جدول کد خطا",
+    "yearEdit": "",
+    "code": "",
+    "noskhe": "",
+    "yearCreate": "",
+    "link": "https://www.shaparak.ir/files/tip/gdol-d-kht?expires=1629268717&signature=dd9601ea71fce25391cc3b647a8fd220f69982521f06fa24f803027e186c0279"
+},
+    {
+    "id":11,
+    "name": "کد صنف",
+    "yearEdit": "",
+    "code": "",
+    "noskhe": "",
+    "yearCreate": "",
+    "link": "https://www.shaparak.ir/files/tip/d-snf?expires=1629268717&signature=77a96811f9bd51c3370149af34426185f2f9a45b6cf9ff93eb8b76f8c077ab1f"
+},
+    {
+    "id":12,
+    "name": " کد شهر",
+    "yearEdit": "",
+    "code": "",
+    "noskhe": "",
+    "yearCreate": "",
+    "link": "https://www.shaparak.ir/files/tip/d-shhr?expires=1629268717&signature=1cec21e2133d59439d0c17aac3d623058377d3abbe1185a5ec69632d575412ad"
+}
+]
