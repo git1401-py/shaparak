@@ -11,6 +11,8 @@ import Network from "../components/home/mainSectionParts/Network.vue";
 import Questions from "../components/home/mainSectionParts/Questions.vue";
 import Reports from "../components/home/mainSectionParts/Reports.vue";
 
+import Employ from "../components/epmloye/Employ.vue";
+
 const routes = [
   {
     path: "/",
@@ -40,6 +42,10 @@ const routes = [
   { path: "/accepteds", name: "accepteds", component: Accepteds },
   { path: "/questions", name: "questions", component: Questions },
   { path: "/articels", name: "articels", component: Articels },
+
+  // Employ Page 
+  { path: "/employ", name: "employ", component: Employ },
+
 ];
 
 const router = createRouter({

@@ -218,28 +218,28 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <a href="" class="position-relative">
+       <router-link to="/" class="position-relative">
           <img src="../../../public/img/cartkhan.jpg" class="img-sid" alt="" />
           <div class="cartkhan">
             <h5 class="text-light txt-shadow">راهنمای کد رهگیری مالیاتی</h5>
           </div>
-        </a>
+        </router-link>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <a href="" class="text-decoration-none">
+        <router-link to="/" class="text-decoration-none">
           <div class="appchek img-sid">
             <!-- <img src="../../../public/img/appchek.jpg" class="img-sid" alt="" /> -->
             <h4 class="appchek-txt txt-shadow">برنامک های طرح چک</h4>
           </div>
-        </a>
+        </router-link>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <a href="" class="position-relative" style="top: 0">
+        <router-link to="/employ" class="position-relative" style="top: 0">
           <img src="../../../public/img/estekhdam.jpg" class="img-sid" alt="" />
           <div class="estekhdam">
             <h1 class="text-light text-center txt-shadow">دعوت به همکاری</h1>
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>

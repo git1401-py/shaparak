@@ -1,19 +1,23 @@
 <template>
-  <top-header />
+  <div v-if="$route.path === '/employ'"></div>
+  <div v-else>
+    <top-header />
 
-  <div class="container-fluid bg-primary">
-    <div id="nav" class="text-end">
-      <router-link class="mynav-item" to="/">برگ نخست</router-link>
-      <router-link class="mynav-item" to="/about">درباره ما</router-link>
-      <router-link class="mynav-item" to="/contactus">تماس با ما</router-link>
-      <router-link class="mynav-item" to="/sugestion"
-        >انتقادات و پیشنهادات</router-link
-      >
+    <div class="container-fluid bg-primary">
+      <div id="nav" class="text-end">
+        <router-link class="mynav-item" to="/">برگ نخست</router-link>
+        <router-link class="mynav-item" to="/about">درباره ما</router-link>
+        <router-link class="mynav-item" to="/contactus">تماس با ما</router-link>
+        <router-link class="mynav-item" to="/sugestion"
+          >انتقادات و پیشنهادات</router-link
+        >
+      </div>
     </div>
   </div>
 
   <router-view />
-  <footer-section />
+  <div v-if="$route.path !== '/employ'"> <footer-section /></div>
+ 
 </template>
 
 <script>
@@ -53,7 +57,7 @@ export default {
 }
 #app {
   font-family: "B Araz" !important;
-  
+
   font-weight: bold;
   // font-size: 1.3rem !important;;
 
