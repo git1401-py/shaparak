@@ -389,15 +389,134 @@
             />
           </div>
         </div>
-        
       </div>
     </div>
   </div>
+  <my-legend title="تعیین میزان مهارت کاربردی با نرم افزارهای اداری:">
+    <div class="row txt-color mb-3">
+      <div class="col-8 p-0 me-4 mb-3">
+        <div class="form-group row">
+          <label for="win" class="col-sm-8 col-form-label p-0">
+            سیستم عامل ویندوز، مفاهيم تئوري استفاده و مديريت فایل ها
+          </label>
+          <div class="col-sm-4 pe-0 small">
+            <select
+              class="form-select form-select-sm w-75 pe-4"
+              aria-label=".form-select-sm example"
+              id="win"
+              v-model="skills.win"
+            >
+              <option disabled value="" class="">--انتخاب--</option>
+              <option value="خوب">خوب</option>
+              <option value="متوسط">متوسط</option>
+              <option value="ضعیف">ضعیف</option>
+              <option value="بی اطلاع">بی اطلاع</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 p-0 me-4 mb-3">
+        <div class="form-group row">
+          <label for="office" class="col-sm-8 col-form-label p-0">
+            مجموعه نرم افزارهای Office شامل Word ،Excel، PowerPoint
+          </label>
+          <div class="col-sm-4 pe-0 small">
+            <select
+              class="form-select form-select-sm w-75 pe-4"
+              aria-label=".form-select-sm example"
+              id="office"
+              v-model="skills.office"
+            >
+              <option disabled value="" class="">--انتخاب--</option>
+              <option value="خوب">خوب</option>
+              <option value="متوسط">متوسط</option>
+              <option value="ضعیف">ضعیف</option>
+              <option value="بی اطلاع">بی اطلاع</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 p-0 me-4 mb-3">
+        <div class="form-group row">
+          <label for="outlook" class="col-sm-8 col-form-label p-0">
+            خدمات اطلاعاتي شبکه - اينترنت و پست الکترونيک Outlook
+          </label>
+          <div class="col-sm-4 pe-0 small">
+            <select
+              class="form-select form-select-sm w-75 pe-4"
+              aria-label=".form-select-sm example"
+              id="outlook"
+              v-model="skills.outlook"
+            >
+              <option disabled value="" class="">--انتخاب--</option>
+              <option value="خوب">خوب</option>
+              <option value="متوسط">متوسط</option>
+              <option value="ضعیف">ضعیف</option>
+              <option value="بی اطلاع">بی اطلاع</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 p-0 me-4 mb-3">
+        <div class="form-group row">
+          <label for="m_project" class="col-sm-8 col-form-label p-0">
+            مدیریت و کنترل پروژه با نرم افزار Microsoft Office Project
+          </label>
+          <div class="col-sm-4 pe-0 small">
+            <select
+              class="form-select form-select-sm w-75 pe-4"
+              aria-label=".form-select-sm example"
+              id="m_project"
+              v-model="skills.m_project"
+            >
+              <option disabled value="" class="">--انتخاب--</option>
+              <option value="خوب">خوب</option>
+              <option value="متوسط">متوسط</option>
+              <option value="ضعیف">ضعیف</option>
+              <option value="بی اطلاع">بی اطلاع</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 p-0 me-4">
+        <div class="form-group row">
+          <label for="software" class="col-sm-3 col-form-label p-0">
+            آشنایی با نرم افزار
+          </label>
+          <div class="col-sm-4 pe-0 small">
+            <input
+              type="text"
+              class="form-control-file w-100"
+              id="software"
+              v-model="skills.software"
+            />
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-4 pe-0 small">
+            <select
+              class="form-select form-select-sm w-75 pe-4"
+              aria-label=".form-select-sm example"
+              id="m_project"
+              v-model="skills.m_project"
+            >
+              <option disabled value="" class="">--انتخاب--</option>
+              <option value="خوب">خوب</option>
+              <option value="متوسط">متوسط</option>
+              <option value="ضعیف">ضعیف</option>
+              <option value="بی اطلاع">بی اطلاع</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </my-legend>
 </template>
 
 <script>
 import { ref } from "@vue/reactivity";
+import MyLegend from "./MyLegend.vue";
 export default {
+  components: { MyLegend },
   setup() {
     const skills = ref({
       langs: [
