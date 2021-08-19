@@ -304,20 +304,26 @@
       <div class="row">
         <div class="col-12">
           آیا دارای دانش و مهارت لازم برای کار با رایانه و نرم افزارهای اداری
-          هستید؟
+          هستید؟<span class="text-danger fs-4">
+                  *
+                </span>
         </div>
         <div class="col-12">
-          آیا تاکنون آزمون گواهینامه کاربری کامپيوتر (ICDL) را گذرانده اید؟
+          آیا تاکنون آزمون گواهینامه کاربری کامپيوتر (ICDL) را گذرانده اید؟<span class="text-danger fs-4">
+                  *
+                </span>
         </div>
         <div class="col-12">
           آیا دارای گواهینامه بین‌المللی در زمینه فناوری اطلاعات و ارتباط (ICT)
-          هستید؟
+          هستید؟<span class="text-danger fs-4">
+                  *
+                </span>
         </div>
       </div>
     </div>
     <div class="col-3 px-0">
-      <div class="row">
-        <div class="col-12">
+      <div class="row mb-2">
+        <div class="col-12 mb-3">
           <div class="form-check">
             <label class="form-check-label px-4" for="yesedu_pc"> بله </label>
             <input
@@ -341,7 +347,7 @@
             />
           </div>
         </div>
-        <div class="col-12">
+        <div class="col-12 mb-3">
           <div class="form-check">
             <label class="form-check-label px-4" for="yesicdl"> بله </label>
             <input
@@ -365,7 +371,7 @@
             />
           </div>
         </div>
-        <div class="col-12">
+        <div class="col-12 mb-3">
           <div class="form-check">
             <label class="form-check-label px-4" for="yesict"> بله </label>
             <input
@@ -397,7 +403,9 @@
       <div class="col-8 p-0 me-4 mb-3">
         <div class="form-group row">
           <label for="win" class="col-sm-8 col-form-label p-0">
-            سیستم عامل ویندوز، مفاهيم تئوري استفاده و مديريت فایل ها
+            سیستم عامل ویندوز، مفاهيم تئوري استفاده و مديريت فایل ها<span class="text-danger fs-4">
+                  *
+                </span>
           </label>
           <div class="col-sm-4 pe-0 small">
             <select
@@ -418,7 +426,9 @@
       <div class="col-8 p-0 me-4 mb-3">
         <div class="form-group row">
           <label for="office" class="col-sm-8 col-form-label p-0">
-            مجموعه نرم افزارهای Office شامل Word ،Excel، PowerPoint
+            مجموعه نرم افزارهای Office شامل Word ،Excel، PowerPoint<span class="text-danger fs-4">
+                  *
+                </span>
           </label>
           <div class="col-sm-4 pe-0 small">
             <select
@@ -439,7 +449,9 @@
       <div class="col-8 p-0 me-4 mb-3">
         <div class="form-group row">
           <label for="outlook" class="col-sm-8 col-form-label p-0">
-            خدمات اطلاعاتي شبکه - اينترنت و پست الکترونيک Outlook
+            خدمات اطلاعاتي شبکه - اينترنت و پست الکترونيک Outlook<span class="text-danger fs-4">
+                  *
+                </span>
           </label>
           <div class="col-sm-4 pe-0 small">
             <select
@@ -460,7 +472,9 @@
       <div class="col-8 p-0 me-4 mb-3">
         <div class="form-group row">
           <label for="m_project" class="col-sm-8 col-form-label p-0">
-            مدیریت و کنترل پروژه با نرم افزار Microsoft Office Project
+            مدیریت و کنترل پروژه با نرم افزار Microsoft Office Project<span class="text-danger fs-4">
+                  *
+                </span>
           </label>
           <div class="col-sm-4 pe-0 small">
             <select
