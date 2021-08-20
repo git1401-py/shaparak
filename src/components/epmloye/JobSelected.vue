@@ -14,6 +14,7 @@
             :value="job.name_job"
             v-model="employ.type_job"
             style="position: absolute; right: 3%"
+            checked
           />
         </div>
       </template>
@@ -50,6 +51,7 @@
           class="form-select form-select-sm w-50 px-4"
           aria-label=".form-select-sm example"
           v-model="employ.time_job"
+          required
         >
           <option disabled value="" class="">--انتخاب نوع همکاری--</option>
           <option value="تمام وقت">تمام وقت</option>
@@ -70,6 +72,7 @@
           aria-label=".form-select-sm example"
           style="width: 43%"
           v-model="employ.underestand"
+          required
         >
           <option disabled value="" class="">--انتخاب--</option>
           <option value="آگهی استخدام">آگهی استخدام</option>
@@ -186,26 +189,29 @@
 </template>
 
 <script>
-import {  ref } from "@vue/reactivity";
+import { reactive } from "@vue/reactivity";
+import MyLegend from "./MyLegend";
+
 export default {
-    props:['titles'],
-  setup() {
-    const employ = ref({
+  components: { MyLegend },
+  props: ["titles"],
+  setup(props, context) {
+    const employ = reactive({
       date: "",
       underestand: "",
       time_job: "",
       type_job: "",
       name_newspaper: "",
     });
-    const introduced = ref({
+    const introduced = reactive({
       name: "",
       job: "",
       tell: "",
       address: "",
       relative: "",
     });
-
-
+    context.emit("introduced", introduced);
+    context.emit("employ", employ);
     return {
       introduced,
       employ,

@@ -31,24 +31,45 @@
         </tr>
       </thead>
       <tbody>
-        <template v-for="item in Education_items" :key="item.id">
+        <template v-for="item in Teaching_items" :key="item.id">
           <tr v-if="item.status">
             <td style="width: 30%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.title"
+                required
+              />
             </td>
             <td style="width: 10%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.year"
+              />
             </td>
             <td style="width: 15%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.academy_name"
+              />
             </td>
             <td style="width: 15%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.lacate_det"
+              />
             </td>
             <td style="width: 15%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.accepted_time"
+              />
             </td>
-            
+
             <td style="width: 8%" class="align-middle">
               <button
                 @click="Education_status_fn(item.id)"
@@ -68,22 +89,33 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
+import { reactive, ref } from "@vue/reactivity";
 export default {
-  setup() {
-    const Education_items = ref([{}]);
+  setup(props,context) {
+    const Teaching_items = reactive([
+      {
+        id: 0,
+        status: "false",
+        title: "",
+        year: "",
+        academy_name: "",
+        lacate_det: "",
+        accepted_time: "",
+      },
+    ]);
     const Education_num = ref(1);
     function addEducation() {
-      Education_items.value.push({
+      Teaching_items.push({
         id: Education_num.value++,
         status: true,
       });
     }
     function Education_status_fn(id) {
-      Education_items.value[id].status = false;
+      Teaching_items[id].status = false;
     }
+    context.emit('Teaching_items',Teaching_items)
     return {
-      Education_items,
+      Teaching_items,
       addEducation,
       Education_status_fn,
     };

@@ -231,12 +231,12 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
+import { reactive, ref } from "@vue/reactivity";
 export default {
-  setup() {
+  setup(props,context) {
     const Y_N = ref("بلی");
     const years_job = ref("");
-    const job_info = ref([
+    const job_info = reactive([
       {
         start_year: "",
         start_mounth: "",
@@ -332,6 +332,7 @@ export default {
     function Education_status_fn(id) {
       Education_items.value[id].status = false;
     }
+    context.emit('job_info',job_info);
     return {
       Education_items,
       addEducation,

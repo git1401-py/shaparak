@@ -13,6 +13,7 @@
             aria-label=".form-select-sm example"
             id="speaking0"
             v-model="skills.langs[0].speaking"
+            required
           >
             <option disabled value="" class="">--انتخاب--</option>
             <option value="خوب">خوب</option>
@@ -35,6 +36,7 @@
             aria-label=".form-select-sm example"
             id="reading0"
             v-model="skills.langs[0].reading"
+            required
           >
             <option disabled value="" class="">--انتخاب--</option>
             <option value="خوب">خوب</option>
@@ -57,6 +59,7 @@
             aria-label=".form-select-sm example"
             id="writing0"
             v-model="skills.langs[0].writing"
+            required
           >
             <option disabled value="" class="">--انتخاب--</option>
             <option value="خوب">خوب</option>
@@ -77,7 +80,7 @@
         <div class="col-sm-5 pe-0 small">
           <input
             type="text"
-            class="form-control-file w-100"
+            class="form-control w-100"
             id="langs1"
             v-model="skills.langs[1].langs"
           />
@@ -91,7 +94,21 @@
         </label>
         <div class="col-sm-8 pe-0 small">
           <select
-            :disabled="skills.langs[1].langs"
+            v-if="skills.langs[1].langs"
+            class="form-select form-select-sm w-100 pe-4"
+            aria-label=".form-select-sm example"
+            id="speaking1"
+            v-model="skills.langs[1].speaking"
+          >
+            <option disabled value="" class="">--انتخاب--</option>
+            <option value="خوب">خوب</option>
+            <option value="متوسط">متوسط</option>
+            <option value="ضعیف">ضعیف</option>
+            <option value="بی اطلاع">بی اطلاع</option>
+          </select>
+          <select
+            v-else
+            disabled
             class="form-select form-select-sm w-100 pe-4"
             aria-label=".form-select-sm example"
             id="speaking1"
@@ -113,7 +130,7 @@
         </label>
         <div class="col-sm-8 pe-0 small">
           <select
-            :disabled="skills.langs[1].langs"
+            v-if="skills.langs[1].langs"
             class="form-select form-select-sm w-100 pe-4"
             aria-label=".form-select-sm example"
             id="reading1"
@@ -125,6 +142,16 @@
             <option value="ضعیف">ضعیف</option>
             <option value="بی اطلاع">بی اطلاع</option>
           </select>
+          <select
+          v-else
+            disabled
+            class="form-select form-select-sm w-100 pe-4"
+            aria-label=".form-select-sm example"
+            id="reading1"
+          >
+            <option disabled value="" class="">--انتخاب--</option>
+          </select>
+          
         </div>
       </div>
     </div>
@@ -135,7 +162,7 @@
         </label>
         <div class="col-sm-8 pe-0 small">
           <select
-            :disabled="skills.langs[1].langs"
+            v-if="skills.langs[1].langs"
             class="form-select form-select-sm w-100 pe-4"
             aria-label=".form-select-sm example"
             id="writing1"
@@ -147,6 +174,16 @@
             <option value="ضعیف">ضعیف</option>
             <option value="بی اطلاع">بی اطلاع</option>
           </select>
+          <select
+            v-else
+            disabled
+            class="form-select form-select-sm w-100 pe-4"
+            aria-label=".form-select-sm example"
+            id="writing1"
+          >
+            <option disabled value="" class="">--انتخاب--</option>
+          </select>
+          
         </div>
       </div>
     </div>
@@ -160,7 +197,7 @@
         <div class="col-sm-5 pe-0 small">
           <input
             type="text"
-            class="form-control-file w-100"
+            class="form-control w-100"
             id="langs1"
             v-model="skills.langs[2].langs"
           />
@@ -174,7 +211,7 @@
         </label>
         <div class="col-sm-8 pe-0 small">
           <select
-            :disabled="skills.langs[2].langs"
+            v-if="skills.langs[2].langs"
             class="form-select form-select-sm w-100 pe-4"
             aria-label=".form-select-sm example"
             id="speaking2"
@@ -186,6 +223,16 @@
             <option value="ضعیف">ضعیف</option>
             <option value="بی اطلاع">بی اطلاع</option>
           </select>
+          <select
+            v-else
+            disabled
+            class="form-select form-select-sm w-100 pe-4"
+            aria-label=".form-select-sm example"
+            id="speaking2"
+          >
+            <option disabled value="" class="">--انتخاب--</option>
+          </select>
+          
         </div>
       </div>
     </div>
@@ -196,7 +243,7 @@
         </label>
         <div class="col-sm-8 pe-0 small">
           <select
-            :disabled="skills.langs[2].langs"
+            v-if="skills.langs[2].langs"
             class="form-select form-select-sm w-100 pe-4"
             aria-label=".form-select-sm example"
             id="reading2"
@@ -208,6 +255,15 @@
             <option value="ضعیف">ضعیف</option>
             <option value="بی اطلاع">بی اطلاع</option>
           </select>
+          <select
+            v-else
+            disabled
+            class="form-select form-select-sm w-100 pe-4"
+            aria-label=".form-select-sm example"
+            id="reading2"
+          >
+            <option disabled value="" class="">--انتخاب--</option>
+          </select>
         </div>
       </div>
     </div>
@@ -218,7 +274,7 @@
         </label>
         <div class="col-sm-8 pe-0 small">
           <select
-            :disabled="skills.langs[2].langs"
+            v-if="skills.langs[2].langs"
             class="form-select form-select-sm w-100 pe-4"
             aria-label=".form-select-sm example"
             id="writing2"
@@ -229,6 +285,15 @@
             <option value="متوسط">متوسط</option>
             <option value="ضعیف">ضعیف</option>
             <option value="بی اطلاع">بی اطلاع</option>
+          </select>
+          <select
+            v-else
+            disabled
+            class="form-select form-select-sm w-100 pe-4"
+            aria-label=".form-select-sm example"
+            id="writing2"
+          >
+            <option disabled value="" class="">--انتخاب--</option>
           </select>
         </div>
       </div>
@@ -272,10 +337,18 @@
             </label>
             <div class="col-sm-7 pe-0 small">
               <input
+                v-if="skills.TI == 'بله'"
                 type="text"
-                class="form-control-file w-100"
+                class="form-control w-100"
                 id="TI_mark"
                 v-model="skills.TI_mark"
+              />
+              <input
+                v-else
+                disabled
+                type="text"
+                class="form-control w-100"
+                id="TI_mark"
               />
             </div>
           </div>
@@ -287,10 +360,18 @@
             </label>
             <div class="col-sm-7 pe-0 small">
               <input
+                v-if="skills.TI == 'بله'"
                 type="text"
-                class="form-control-file w-100"
+                class="form-control w-100"
                 id="TI_date"
                 v-model="skills.TI_date"
+              />
+              <input
+                v-else
+                disabled
+                type="text"
+                class="form-control w-100"
+                id="TI_date"
               />
             </div>
           </div>
@@ -304,20 +385,18 @@
       <div class="row">
         <div class="col-12">
           آیا دارای دانش و مهارت لازم برای کار با رایانه و نرم افزارهای اداری
-          هستید؟<span class="text-danger fs-4">
-                  *
-                </span>
+          هستید؟<span class="text-danger fs-4"> * </span>
         </div>
         <div class="col-12">
-          آیا تاکنون آزمون گواهینامه کاربری کامپيوتر (ICDL) را گذرانده اید؟<span class="text-danger fs-4">
-                  *
-                </span>
+          آیا تاکنون آزمون گواهینامه کاربری کامپيوتر (ICDL) را گذرانده اید؟<span
+            class="text-danger fs-4"
+          >
+            *
+          </span>
         </div>
         <div class="col-12">
           آیا دارای گواهینامه بین‌المللی در زمینه فناوری اطلاعات و ارتباط (ICT)
-          هستید؟<span class="text-danger fs-4">
-                  *
-                </span>
+          هستید؟<span class="text-danger fs-4"> * </span>
         </div>
       </div>
     </div>
@@ -403,9 +482,11 @@
       <div class="col-8 p-0 me-4 mb-3">
         <div class="form-group row">
           <label for="win" class="col-sm-8 col-form-label p-0">
-            سیستم عامل ویندوز، مفاهيم تئوري استفاده و مديريت فایل ها<span class="text-danger fs-4">
-                  *
-                </span>
+            سیستم عامل ویندوز، مفاهيم تئوري استفاده و مديريت فایل ها<span
+              class="text-danger fs-4"
+            >
+              *
+            </span>
           </label>
           <div class="col-sm-4 pe-0 small">
             <select
@@ -413,6 +494,7 @@
               aria-label=".form-select-sm example"
               id="win"
               v-model="skills.win"
+              required
             >
               <option disabled value="" class="">--انتخاب--</option>
               <option value="خوب">خوب</option>
@@ -426,9 +508,11 @@
       <div class="col-8 p-0 me-4 mb-3">
         <div class="form-group row">
           <label for="office" class="col-sm-8 col-form-label p-0">
-            مجموعه نرم افزارهای Office شامل Word ،Excel، PowerPoint<span class="text-danger fs-4">
-                  *
-                </span>
+            مجموعه نرم افزارهای Office شامل Word ،Excel، PowerPoint<span
+              class="text-danger fs-4"
+            >
+              *
+            </span>
           </label>
           <div class="col-sm-4 pe-0 small">
             <select
@@ -436,6 +520,7 @@
               aria-label=".form-select-sm example"
               id="office"
               v-model="skills.office"
+              required
             >
               <option disabled value="" class="">--انتخاب--</option>
               <option value="خوب">خوب</option>
@@ -449,9 +534,11 @@
       <div class="col-8 p-0 me-4 mb-3">
         <div class="form-group row">
           <label for="outlook" class="col-sm-8 col-form-label p-0">
-            خدمات اطلاعاتي شبکه - اينترنت و پست الکترونيک Outlook<span class="text-danger fs-4">
-                  *
-                </span>
+            خدمات اطلاعاتي شبکه - اينترنت و پست الکترونيک Outlook<span
+              class="text-danger fs-4"
+            >
+              *
+            </span>
           </label>
           <div class="col-sm-4 pe-0 small">
             <select
@@ -459,6 +546,7 @@
               aria-label=".form-select-sm example"
               id="outlook"
               v-model="skills.outlook"
+              required
             >
               <option disabled value="" class="">--انتخاب--</option>
               <option value="خوب">خوب</option>
@@ -472,9 +560,11 @@
       <div class="col-8 p-0 me-4 mb-3">
         <div class="form-group row">
           <label for="m_project" class="col-sm-8 col-form-label p-0">
-            مدیریت و کنترل پروژه با نرم افزار Microsoft Office Project<span class="text-danger fs-4">
-                  *
-                </span>
+            مدیریت و کنترل پروژه با نرم افزار Microsoft Office Project<span
+              class="text-danger fs-4"
+            >
+              *
+            </span>
           </label>
           <div class="col-sm-4 pe-0 small">
             <select
@@ -482,6 +572,7 @@
               aria-label=".form-select-sm example"
               id="m_project"
               v-model="skills.m_project"
+              required
             >
               <option disabled value="" class="">--انتخاب--</option>
               <option value="خوب">خوب</option>
@@ -500,7 +591,7 @@
           <div class="col-sm-4 pe-0 small">
             <input
               type="text"
-              class="form-control-file w-100"
+              class="form-control w-100"
               id="software"
               v-model="skills.software"
             />
@@ -508,10 +599,12 @@
           <div class="col-sm-1"></div>
           <div class="col-sm-4 pe-0 small">
             <select
+              v-if="skills.software"
               class="form-select form-select-sm w-75 pe-4"
               aria-label=".form-select-sm example"
               id="m_project"
-              v-model="skills.m_project"
+              required
+              v-model="skills.software_level"
             >
               <option disabled value="" class="">--انتخاب--</option>
               <option value="خوب">خوب</option>
@@ -519,6 +612,16 @@
               <option value="ضعیف">ضعیف</option>
               <option value="بی اطلاع">بی اطلاع</option>
             </select>
+            <select
+              v-else
+              disabled
+              class="form-select form-select-sm w-75 pe-4"
+              aria-label=".form-select-sm example"
+              id="m_project"
+            >
+              <option disabled value="" class="">--انتخاب--</option>
+            </select>
+            
           </div>
         </div>
       </div>
@@ -527,12 +630,12 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
+import { reactive } from "@vue/reactivity";
 import MyLegend from "./MyLegend.vue";
 export default {
   components: { MyLegend },
-  setup() {
-    const skills = ref({
+  setup(props, context) {
+    const skills = reactive({
       langs: [
         {
           langs: "انگلیسی",
@@ -564,7 +667,9 @@ export default {
       outlook: "",
       m_project: "",
       software: "",
+      software_level: "",
     });
+    context.emit("skills", skills);
     return {
       skills,
     };

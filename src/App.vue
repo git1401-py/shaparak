@@ -8,16 +8,15 @@
         <router-link class="mynav-item" to="/">برگ نخست</router-link>
         <router-link class="mynav-item" to="/about">درباره ما</router-link>
         <router-link class="mynav-item" to="/contactus">تماس با ما</router-link>
-        <router-link class="mynav-item" to="/sugestion"
-          >انتقادات و پیشنهادات</router-link
-        >
+        <router-link class="mynav-item" to="/sugestion">
+          انتقادات و پیشنهادات
+        </router-link>
       </div>
     </div>
   </div>
 
   <router-view />
-  <div v-if="$route.path !== '/employ'"> <footer-section /></div>
- 
+  <div v-if="$route.path !== '/employ'"><footer-section /></div>
 </template>
 
 <script>
@@ -31,18 +30,18 @@ export default {
 
 <style lang="scss">
 @font-face {
-  font-family: "B Araz";
+  font-family: "BYekanBold";
   font-weight: bold;
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
   // src: url("./assets/fonts/Sahel.eot");
   /* IE9 Compat Modes */
-  src: local("B Araz"),
+  src: local("BYekanBold"),
     // url("./assets/fonts/Sahel.eot?#iefix") format("embedded-opentype"),
     // url("./assets/fonts/Sahel.woff2") format("woff2"),
     // url("./assets/fonts/Sahel.woff") format("woff"),
-    url("./assets/fonts/B Araz.ttf") format("truetype");
+    url("./assets/fonts/BYekanBold.ttf") format("truetype");
   //   /* Safari, Android, iOS */
 }
 @font-face {
@@ -56,7 +55,7 @@ export default {
   background: #ccc;
 }
 #app {
-  font-family: "B Araz" !important;
+  font-family: "BYekanBold" !important;
 
   font-weight: bold;
   // font-size: 1.3rem !important;;

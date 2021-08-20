@@ -31,6 +31,7 @@
               class="form-select form-select-sm w-50 pe-4"
               aria-label=".form-select-sm example"
               v-model="coorporate.starting_date"
+              required
             >
               <option disabled value="" class="">--انتخاب--</option>
               <option value="هم اکنون">هم اکنون</option>
@@ -44,9 +45,10 @@
         <div class="col-12 mb-3">
           <input
             type="text"
-            class="form-control-file w-75"
+            class="form-control w-75"
             id="salery"
             v-model="coorporate.salery"
+            required
           />
         </div>
         <div class="col-12 mb-3">
@@ -223,10 +225,10 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
+import { reactive } from "@vue/reactivity";
 export default {
-  setup() {
-    const coorporate = ref({
+  setup(props,context) {
+    const coorporate = reactive({
       starting_date: "",
       salery: "",
       extra_work: "خیر",
@@ -235,6 +237,7 @@ export default {
       unablity: "خیر",
       distinction: [],
     });
+    context.emit('coorporate',coorporate);
     return {
       coorporate,
     };

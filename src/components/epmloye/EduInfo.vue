@@ -8,7 +8,7 @@
     </div>
     <table
       class="table table-borderless align-top text-end txt-color"
-      style="line-height: 9px"
+      style="line-height: 16px"
     >
       <thead>
         <tr>
@@ -30,7 +30,7 @@
           <td scope="col" style="width: 5%" class="align-top">
             ماه<span class="text-danger fs-4 align-top bg-danger"> </span>
           </td>
-          <td scope="col" style="width: 7%" class="align-top">
+          <td scope="col" style="width: 8%" class="align-top">
             معدل<span class="text-danger fs-4"> * </span>
           </td>
           <td scope="col" style="width: 15%" class="align-top">
@@ -43,12 +43,19 @@
         <template v-for="item in Education_items" :key="item.id">
           <tr v-if="item.status">
             <td style="width: 15%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.academy_name"
+                required
+              />
             </td>
             <td style="width: 15%" class="align-middle">
               <select
                 class="form-select form-select-sm w-100 px-4"
                 aria-label=".form-select-sm example"
+                v-model="item.state"
+                required
               >
                 <option disabled value="" class="">--انتخاب--</option>
                 <option value="دیپلم">دیپلم</option>
@@ -60,12 +67,19 @@
               </select>
             </td>
             <td style="width: 15%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.edu_name"
+                required
+              />
             </td>
             <td style="width: 15%" class="align-middle">
               <select
                 class="form-select form-select-sm w-100 px-4"
                 aria-label=".form-select-sm example"
+                v-model="item.edu_status"
+                required
               >
                 <option disabled value="">--انتخاب--</option>
                 <option value="فارغ تحصیل">فارغ تحصیل</option>
@@ -73,16 +87,33 @@
               </select>
             </td>
             <td style="width: 5%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.year"
+              />
             </td>
             <td style="width: 5%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.mounth"
+              />
             </td>
-            <td style="width: 7%" class="align-middle">
-              <input type="text" class="form-control-file w-100" />
+            <td style="width: 8%" class="align-middle">
+              <input
+                type="text"
+                class="form-control w-100"
+                v-model="item.mark"
+                required
+              />
             </td>
             <td style="width: 15%" class="align-middle">
-              <textarea rows="2" class="form-control-file w-100" />
+              <textarea
+                rows="2"
+                class="form-control w-100"
+                v-model="item.degrees"
+              />
             </td>
             <td style="width: 8%" class="align-middle">
               <button
@@ -103,23 +134,34 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
+import { reactive, ref } from "@vue/reactivity";
 export default {
-  setup() {
-    const Education_items = ref([{
-      id:1,
-      status: true
-    }]);
+  setup(props, context) {
+    const Education_items = reactive([
+      {
+        id: 1,
+        status: true,
+        academy_name: "",
+        state: "",
+        edu_name: "",
+        edu_status: "",
+        year: "",
+        mounth: "",
+        mark: "",
+        degrees: "",
+      },
+    ]);
     const Education_num = ref(1);
     function addEducation() {
-      Education_items.value.push({
+      Education_items.push({
         id: Education_num.value++,
         status: true,
       });
     }
     function Education_status_fn(id) {
-      Education_items.value[id].status = false;
+      Education_items[id].status = false;
     }
+    context.emit("Education_items", Education_items);
     return {
       Education_items,
       addEducation,
