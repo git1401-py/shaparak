@@ -81,7 +81,7 @@
   },
   {
     "id": 10,
-    "img_url": "./img/compony/PSP/PSP.png",
+    "img_url": "./img/compony/PSP/PSP10.png",
     "name":"شرکت کارت اعتباری ایران کیش",
     "address": "تهران، میدان آرژانتین، خیابان احمد قصیر، خیابان هفدهم، پلاک 17 ",
     "tell": "021-85945501",
@@ -89,7 +89,7 @@
   },
   {
     "id": 11,
-    "img_url": "./img/compony/PSP/PSP.png",
+    "img_url": "./img/compony/PSP/PSP11.png",
     "name":"شرکت پرداخت الکترونیک سپهر",
     "address": "خیابان سهروردی شمالی، خیابان هویزه غربی، پلاک 63 ",
     "tell": "021-89396000",

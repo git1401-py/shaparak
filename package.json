@@ -1,5 +1,5 @@
 {
-  "name": "shaparak",
+  "name": "شاپرک",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -29,6 +29,7 @@
     "vue": "^3.0.0",
     "vue-jalali-moment": "^1.0.0",
     "vue-moment": "^4.1.0",
+    "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.0.0-0",
     "vue3-jalali-moment": "^3.0.1",
     "vuex": "^4.0.0-0"

@@ -83,9 +83,9 @@
     {
     "id":9,
     "name": "راهنمای پرداخت یاری",
-    "yearEdit": "01.00",
+    "yearEdit": "",
     "code": "SHP_STD_PFGUILDLINE",
-    "noskhe": "",
+    "noskhe": "01.00",
     "yearCreate": "99/03/26",
     "link": "https://www.shaparak.ir/files/tip/r-hnm-rd-kht-r?expires=1629268717&signature=19e66871078f41366853c4b2d506eac1d241478c08cfc245fb291be1ad5e2e51"
 },

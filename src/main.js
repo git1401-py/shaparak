@@ -3,6 +3,7 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
+// import { VueReCaptcha } from "vue-recaptcha-v3";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 // import 'bootstrap/dist/js/bootstrap.min.js'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -44,7 +45,8 @@ library.add(
 
 createApp(App)
   .use(require("vue3-jalali-moment"))
-  
+
   .use(store)
   .use(router)
+  // .use(VueReCaptcha, { siteKey: "6LftNBYcAAAAADPRjsJO8tXk17Qowb7GKcZi7Gfg" })
   .mount("#app");

@@ -1,13 +1,23 @@
 <template>
   <div class="my-container p-md-0 p-lg-5 pt-lg-0 text-end">
-    <div v-if="toperror" class="bg-danger small text-light p-1 w-50" style="margin:20px 25%">
-      {{  toperror }}
+    <div
+      v-if="toperror"
+      class="bg-danger small text-light p-1 w-50"
+      style="margin: 20px 25%"
+    >
+      {{ toperror }}
     </div>
     <div class="my-contain small p-4">
-      <div v-if="error && toperror" class="p-2 mb-3 txt-color" style="border:2px solid red;background:pink;border-radius:5px">
-        <h6 class="pe-3" style="font-weight:bold">لطفاً خطاهای زیر را اصلاح نمایید:</h6>
-        <ul >
-          <li v-for="err in error" :key="err" style="margin-right:-30px;">
+      <div
+        v-if="error && toperror"
+        class="p-2 mb-3 txt-color"
+        style="border: 2px solid red; background: pink; border-radius: 5px"
+      >
+        <h6 class="pe-3" style="font-weight: bold">
+          لطفاً خطاهای زیر را اصلاح نمایید:
+        </h6>
+        <ul>
+          <li v-for="err in error" :key="err" style="margin-right: -30px">
             {{ err }}
           </li>
         </ul>
@@ -62,7 +72,7 @@
           <div class="form-group row me-3 txt-color">
             <label for="years_job" class="col-sm-2 col-form-label p-0"> </label>
             <div class="col-sm-3 pe-0 small">
-              <button type="submit" class="btn btn-primary">ثبت درخواست</button>
+              <a class="btn btn-primary">hlkdj </a>
             </div>
           </div>
           <div class="form-group row me-3 txt-color my-3">
@@ -153,7 +163,6 @@ export default {
       let le = ref(error.length);
       for (let index = 0; index < le.value; index++) {
         error.pop();
-        
       }
       information.Education_items.forEach((element) => {
         if (!element.academy_name) {
@@ -208,7 +217,10 @@ export default {
           "وارد کردن فیلد زمان آمادگی برای شروع کار در صورت گزینش الزامیست."
         );
       }
-      if(error){toperror.value = "خطا در ثبت درخواست، لطفاً ورودی های مشخص شده را مجددا بررسی نمایید."}
+      if (error) {
+        toperror.value =
+          "خطا در ثبت درخواست، لطفاً ورودی های مشخص شده را مجددا بررسی نمایید.";
+      }
     }
     function employfn(info) {
       information.employ_info = info;
