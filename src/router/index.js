@@ -13,6 +13,7 @@ import Yar from "../components/home/mainSectionParts/Componies/Yar.vue";
 
 import Accepteds from "../components/home/mainSectionParts/Accepteds.vue";
 import Articels from "../components/home/mainSectionParts/Articels.vue";
+import Articel from "../components/home/mainSectionParts/Articels/Articel.vue";
 
 // Network
 import Network from "../components/home/mainSectionParts/Network.vue";
@@ -59,6 +60,7 @@ const routes = [
   { path: "/accepteds", name: "accepteds", component: Accepteds },
   { path: "/questions", name: "questions", component: Questions },
   { path: "/articels", name: "articels", component: Articels },
+  { path: "/articels/:id", name: "articel", component: Articel },
 
   // Employ Page
   { path: "/employ", name: "employ", component: Employ },

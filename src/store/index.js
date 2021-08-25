@@ -7,6 +7,8 @@ import componyYar from "./modules/componiesYar.js";
 import componyApp from "./modules/componiesMiniapp";
 import networkAlphabet from "./modules/NetworkAlphabet";
 import networkBooks from "./modules/NetworkBooks";
+import reports from "./modules/reports";
+import articels from "./modules/articels";
 
 export default createStore({
   modules: {
@@ -17,6 +19,8 @@ export default createStore({
     componyYar,
     componyApp,
     networkAlphabet,
-    networkBooks
+    networkBooks,
+    reports,
+    articels
   },
 });

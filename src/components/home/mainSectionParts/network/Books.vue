@@ -5,7 +5,7 @@
         <span v-show="false">{{ (collapseid = "collapse" + item.id) }}</span>
         <span v-show="false">{{ (strid = "#" + collapseid) }}</span>
 
-        <h2 class="accordion-header  text-start" :id="item.id">
+        <h2 class="accordion-header " :id="item.id">
           <button
             class="accordion-button"
             type="button"

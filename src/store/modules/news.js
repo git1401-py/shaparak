@@ -37,6 +37,18 @@ const news = {
     },
   },
   actions: {
+    async fetchAllNews({ commit }) {
+      const response = await axios
+        .get("./json/news.json", {
+          headers: {
+            "Content-Type": "application/json; charset=UTF-8",
+
+            Accept: "application/json",
+          },
+        });
+
+      commit("setnews", response.data);
+    },
     async fetchNews({ commit }) {
       await axios
         .get("./json/news.json", {
