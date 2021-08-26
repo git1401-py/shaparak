@@ -20,7 +20,19 @@
                     v-if="item.id < 5"
                   >
                     <router-link
-                      :to="{ name: 'articel', params: { id: item.id } }"
+                      :to="{
+                        name: 'articel',
+                        params: { id: item.id },
+                        query: {
+                          id: item.id,
+                          img_url: item.img_url,
+                          title: item.title,
+                          date: item.date,
+                          code: item.code,
+                          txt: item.txt,
+                          description: item.description,
+                        },
+                      }"
                       :articel="item"
                       class="row text-dark text-decoration-none"
                     >
@@ -61,6 +73,15 @@
                         name: 'articel',
                         params: {
                           id: item.id,
+                        },
+                        query: {
+                          id: item.id,
+                          img_url: item.img_url,
+                          title: item.title,
+                          date: item.date,
+                          code: item.code,
+                          txt: item.txt,
+                          description: item.description,
                         },
                       }"
                       class="row text-dark text-decoration-none"

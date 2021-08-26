@@ -5,52 +5,35 @@ const articels = {
   state: {
     articels: [],
     articel: {},
-  },
+    },
   getters: {
     allArticels(state) {
       return state.articels;
     },
-    getArticel(state) {
+    allArticel(state) {
       return state.articel;
     },
-    
   },
   mutations: {
     setArticels(state, articels) {
       state.articels = articels;
     },
+    setArticel(state, articels) {
+      state.articel = articels[3];
+    },
   },
   actions: {
-    async fetchAllArticels({ commit } ) {
-      await axios
-        .get("./json/articels.json", {
-          headers: {
-            "Content-Type": "application/json; charset=UTF-8",
+    async fetchAllArticels({ commit }) {
+      const response = await axios.get("./json/articels.json", {
+        headers: {
+          "Content-Type": "application/json; charset=UTF-8",
 
-            Accept: "application/json",
-          },
-        }).then((res)=>{
-          
-          commit("setArticels", res.data);
-        });      
+          Accept: "application/json",
+        },
+      });
+      console.log("There is Arts");
+      commit("setArticels", response.data);
     },
-    async fetchGetArticels({ commit } , id) {
-      await axios
-        .get(`./json/articels.json/${id}`, {
-          headers: {
-            "Content-Type": "application/json; charset=UTF-8",
-
-            Accept: "application/json",
-          },
-        }).then((res)=>{
-         
-          commit("getArticel", res.data);
-        })
-        // .then((art)=>{
-        //   commit("getArticel", art);
-
-        // })
-      }
   },
 };
 export default articels;

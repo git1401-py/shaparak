@@ -65,4 +65,33 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.accordion-item {
+  padding: 5px 0px !important;
+  border: none !important;
+}
+.accordion-button {
+  padding: 10px;
+   background: lightgray !important;
+  color: rgb(105, 103, 103) !important;
+  font-weight: bolder !important;
+  padding-right: 30px;
+}
+.accordion-button::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+}
+.accordion-button::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  background: #000;
+}
+.accordion-button:hover::before {
+  background: green !important;
+}
+</style>

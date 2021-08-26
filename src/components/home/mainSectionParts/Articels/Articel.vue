@@ -3,23 +3,22 @@
     <div class="row">
       <div class="col-12 text-end">
         <h4>
-          {{ articel.title }}
+          {{ route.query.title }}
         </h4>
-        
+
         <p class="text-muted">
-          کد خبر:{{ articel.code }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ساعت انتشار:
-          {{ articel.time }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تاریخ انتشار:{{
-            articel.date
-          }}
+          کد خبر:{{ route.query.code }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ساعت
+          انتشار: {{ route.query.time }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تاریخ
+          انتشار:{{ route.query.date }}
         </p>
       </div>
     </div>
     <hr />
     <div class="row p-5 align-items-center justify-content-center">
-      <img :src="articel.img_url" style="width: 80%" />
+      <img :src="route.query.img_url" style="width: 80%" />
     </div>
     <div class="row my-5 text-secondary fs-5 text-end">
-      {{ articel.description }}
+      {{ route.query.description }}
     </div>
     <hr />
     <div class="row py-2 align-items-center justify-content-center">
@@ -92,13 +91,14 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
-import {  ref } from "@vue/reactivity";
+import { ref } from "@vue/reactivity";
 import { computed } from "@vue/reactivity";
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+// import axios from "axios";
 
 // Import Swiper styles
 export default {
@@ -106,9 +106,7 @@ export default {
     Swiper,
     SwiperSlide,
   },
-  mounted(){
-
-  },
+  mounted() {},
   methods: {
     onSwiper(swiper) {
       console.log(swiper);
@@ -117,35 +115,27 @@ export default {
       console.log("slide change");
     },
   },
-  
+
   setup() {
-    const store = useStore();
+    // const store = useStore();
     const route = useRoute();
+    const store = useStore();
 
     fetchArticels();
-    fetchArticel();
     const articels = computed(() => store.getters["articels/allArticels"]);
-    const articel = computed(() => store.getters["articels/getArticel"]);
     async function fetchArticels() {
       // loading.value = true;
       await store.dispatch("articels/fetchAllArticels");
       // loading.value = false;
     }
-    async function fetchArticel() {
-      // loading.value = true;
-      await store.dispatch("articels/fetchGetArticels",Number(route.params.id));
-      // loading.value = false;
-    }
-    // const articels = ref([]);
-    // articels.value = route.params.articels;
-    console.log("route.params.id",Number(route.params.id));
     
+    console.log("route.params.id", Number(route.params.id));
+
     const slidehover = ref(false);
     return {
       articels,
-      articel,
       slidehover,
-      route
+      route,
     };
   },
 };

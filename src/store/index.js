@@ -9,6 +9,10 @@ import networkAlphabet from "./modules/NetworkAlphabet";
 import networkBooks from "./modules/NetworkBooks";
 import reports from "./modules/reports";
 import articels from "./modules/articels";
+import articel from "./modules/articel";
+import questionCart from "./modules/questionCart";
+import questionStore from "./modules/questionStore";
+import questionNet from "./modules/questionNet";
 
 export default createStore({
   modules: {
@@ -21,6 +25,10 @@ export default createStore({
     networkAlphabet,
     networkBooks,
     reports,
-    articels
+    articels,
+    articel,
+    questionCart,
+    questionStore,
+    questionNet
   },
 });

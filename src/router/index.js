@@ -21,6 +21,10 @@ import Alphabet from "../components/home/mainSectionParts/network/Alphabet.vue";
 import Books from "../components/home/mainSectionParts/network/Books.vue";
 
 import Questions from "../components/home/mainSectionParts/Questions.vue";
+import cart from "../components/home/mainSectionParts/question/cart.vue";
+import net from "../components/home/mainSectionParts/question/net.vue";
+import store from "../components/home/mainSectionParts/question/store.vue";
+
 import Reports from "../components/home/mainSectionParts/Reports.vue";
 
 import Employ from "../components/epmloye/Employ.vue";
@@ -58,7 +62,12 @@ const routes = [
     ],
   },
   { path: "/accepteds", name: "accepteds", component: Accepteds },
-  { path: "/questions", name: "questions", component: Questions },
+  { path: "/questions", name: "questions", component: Questions,
+  children: [
+    { path: "/cart", name: "Psp", component: cart },
+    { path: "/net", name: "Bank", component: net },
+    { path: "/store", name: "store", component: store },
+  ], },
   { path: "/articels", name: "articels", component: Articels },
   { path: "/articels/:id", name: "articel", component: Articel },
 
