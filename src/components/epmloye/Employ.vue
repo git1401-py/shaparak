@@ -1,13 +1,14 @@
 <template>
+<TopHeader />
   <div class="my-container p-md-0 p-lg-5 pt-lg-0 text-end">
     <div
       v-if="toperror"
-      class="bg-danger small text-light p-1 w-50"
+      class="bg-danger small text-light p-1 w-50 mt-4"
       style="margin: 20px 25%"
     >
       {{ toperror }}
     </div>
-    <div class="my-contain small p-4">
+    <div class="my-contain small p-4 mt-4">
       <div
         v-if="error && toperror"
         class="p-2 mb-3 txt-color"
@@ -108,6 +109,7 @@
       </form>
     </div>
   </div>
+  <FooterCopyRight />
 </template>
 
 <script>
@@ -122,6 +124,8 @@ import TeachInfo from "./TeachInfo.vue";
 import JobInfo from "./JobInfo.vue";
 import Skills from "./Skills.vue";
 import Cooperation from "./Cooperation.vue";
+import TopHeader from "./TopHeader.vue";
+import FooterCopyRight from "./FooterCopyRight.vue";
 export default {
   components: {
     MyLegend,
@@ -133,6 +137,8 @@ export default {
     JobInfo,
     Skills,
     Cooperation,
+    TopHeader,
+    FooterCopyRight
   },
   setup() {
     const store = useStore();

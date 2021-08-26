@@ -218,7 +218,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-4">
-       <router-link to="/" class="position-relative">
+        <router-link to="/" class="position-relative">
           <img src="../../../public/img/cartkhan.jpg" class="img-sid" alt="" />
           <div class="cartkhan">
             <h5 class="text-light txt-shadow">راهنمای کد رهگیری مالیاتی</h5>
@@ -227,17 +227,34 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4">
         <router-link to="/" class="text-decoration-none">
-          <div class="appchek img-sid">
-            <!-- <img src="../../../public/img/appchek.jpg" class="img-sid" alt="" /> -->
+          <div
+            class="position-relative"
+            style="top: 0; height: 100%; width: 100%"
+          >
+            <div class="appchek"></div>
+            <img
+              src="../../../public/img/appchek.jpg"
+              class="position:absolute;top:0;zindex:3 img-sid"
+              alt=""
+            />
             <h4 class="appchek-txt txt-shadow">برنامک های طرح چک</h4>
           </div>
         </router-link>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <router-link to="/employ" class="position-relative" style="top: 0">
-          <img src="../../../public/img/estekhdam.jpg" class="img-sid" alt="" />
-          <div class="estekhdam">
-            <h1 class="text-light text-center txt-shadow">دعوت به همکاری</h1>
+        <router-link to="/employ">
+          <div
+            class="position-relative"
+            style="top: 0; height: 100%; width: 100%"
+          >
+            <img
+              src="../../../public/img/estekhdam.jpg"
+              class="img-sid"
+              alt=""
+            />
+            <div class="estekhdam">
+              <h1 class="text-light text-center txt-shadow">دعوت به همکاری</h1>
+            </div>
           </div>
         </router-link>
       </div>
@@ -327,14 +344,20 @@ export default {
   background: rgba(4, 4, 4, 0.3);
 }
 .appchek {
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 99%;
+  height: 76%;
+  border-radius: 5px;
+  z-index: 4;
+
   background: linear-gradient(
       310deg,
       rgb(19, 164, 248) 0%,
       rgba(19, 164, 248, 0.95) 50%,
       transparent 10%
     ),
-    url("../../../public/img/appchek.jpg") center center no-repeat;
+    center center no-repeat;
   background-size: cover;
 }
 .appchek-txt {
@@ -351,10 +374,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 145px;
-  top: -60px;
-  left: 0;
+  width: 98%;
+  height: 76%;
+  top: 0;
+  left: 1%;
   background: rgba(4, 4, 4, 0.3);
 }
 @font-face {
