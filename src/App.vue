@@ -1,5 +1,5 @@
 <template>
-  <div v-if="$route.path === '/employ'"></div>
+  <div v-if="$route.path === '/employ' || $route.path === '/login' "></div>
   <div v-else>
     <top-header />
 
@@ -16,7 +16,7 @@
   </div>
 
   <router-view />
-  <div v-if="$route.path !== '/employ'"><footer-section /></div>
+  <div v-if="$route.path !== '/employ' || $route.path !== '/login' "><footer-section /></div>
 </template>
 
 <script>

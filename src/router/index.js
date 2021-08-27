@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Contactus from "../views/Contactus.vue";
 import Sugestion from "../views/Sugestion.vue";
+import login from "../views/login.vue";
 
 // ************Main section parts*******
 // Componies
@@ -39,6 +40,7 @@ const routes = [
   { path: "/", name: "Home", component: Home },
   { path: "/contactus", name: "Contactus", component: Contactus },
   { path: "/sugestion", name: "Sugestion", component: Sugestion },
+  { path: "/login", name: "login", component: login },
 
   // *******Main section parts********
   {

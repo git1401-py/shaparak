@@ -9,22 +9,24 @@
           <div class="col-6"></div>
           <div class="col-6 d-flex align-items-center justify-content-between">
             <img src="../../../public/img/parcham.png" alt="" />
-            
-<!-- <div>{{ $filter.moment("2021/12/8", "jYYYY/jMMMM/dddd") }}</div><hr/> -->
+
+            <!-- <div>{{ $filter.moment("2021/12/8", "jYYYY/jMMMM/dddd") }}</div><hr/> -->
             <date />
             <!-- پنج شنبه 21 مرداد 140 -->
           </div>
         </div>
         <div class="row m-3 mx-0">
           <div class="col-sm-6">
-            <div class="btn btn-success w-100" style="color: #fff">
-              <font-awesome-icon
-                class=""
-                :icon="['fa', 'user-friends']"
-                style="width: 12px"
-              />
-              امور اعضاء
-            </div>
+            <router-link to="/login">
+              <div class="btn btn-success w-100" style="color: #fff">
+                <font-awesome-icon
+                  class=""
+                  :icon="['fa', 'user-friends']"
+                  style="width: 12px"
+                />
+                امور اعضاء
+              </div>
+            </router-link>
           </div>
           <div class="col-sm-6">
             <div class="input-group" style="direction: ltr">
@@ -53,19 +55,18 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import date from "../Date/date.vue"
-import { ref } from '@vue/reactivity';
+import date from "../Date/date.vue";
+import { ref } from "@vue/reactivity";
 
 export default {
-  setup(){
+  setup() {
     const someDate = ref("");
     someDate.value = "1400/11/11";
-    return{
-      someDate
-    }
-
+    return {
+      someDate,
+    };
   },
-  components: { FontAwesomeIcon , date },
+  components: { FontAwesomeIcon, date },
 };
 </script>
 
