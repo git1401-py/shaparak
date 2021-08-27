@@ -28,6 +28,7 @@ import store from "../components/home/mainSectionParts/question/store.vue";
 import Reports from "../components/home/mainSectionParts/Reports.vue";
 
 import Employ from "../components/epmloye/Employ.vue";
+import CodeGuid from "../components/home/mainSectionParts/RegistrationCodeGuid.vue";
 
 const routes = [
   {
@@ -73,6 +74,7 @@ const routes = [
 
   // Employ Page
   { path: "/employ", name: "employ", component: Employ },
+  { path: "/codeGuid", name: "codeGuid", component: CodeGuid },
 ];
 
 const router = createRouter({

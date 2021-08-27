@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row my-2 mx-4" style="position: relative">
-      <div class="col-xl-8 col-12 pb-5">
+      <div class="col-xl-8 col-12 p-0 pb-5">
         <img src="../../../public/img/slide.png" class="img-slide" />
       </div>
       <div
@@ -218,7 +218,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <router-link to="/" class="position-relative">
+        <router-link to="/codeGuid" class="position-relative">
           <img src="../../../public/img/cartkhan.jpg" class="img-sid" alt="" />
           <div class="cartkhan">
             <h5 class="text-light txt-shadow">راهنمای کد رهگیری مالیاتی</h5>
@@ -226,7 +226,7 @@
         </router-link>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <router-link to="/" class="text-decoration-none">
+        <router-link to="/componies" class="text-decoration-none">
           <div
             class="position-relative"
             style="top: 0; height: 100%; width: 100%"

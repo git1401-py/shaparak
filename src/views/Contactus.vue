@@ -28,7 +28,7 @@ import { useGeolocation } from "../useGeolocation";
 import { Loader } from "@googlemaps/js-api-loader";
 import { onMounted, watch } from "@vue/runtime-core";
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyBea65xicuAhWz8oVHvEn6_Rlg8h9nr_EU";
+const GOOGLE_MAPS_API_KEY = "AIzaSyAaeulAV5PKzwa1faTGxpM2yafaCyrTPPs";
 
 export default {
   setup() {
