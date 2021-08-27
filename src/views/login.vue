@@ -29,7 +29,9 @@
           </h5>
           <h5 class="mb-2">فراموشی کلمه عبور</h5>
           <button class="bth btn-primary mb-2 w-100">ورود به پنل کاربری</button>
-          <button class="bth btn-light w-100">بازگشت به وب سایت</button>
+          <router-link to="/" class="">
+            <button class="bth btn-light w-100">بازگشت به وب سایت</button>
+          </router-link>
         </form>
       </div>
       <div class="col-sm-1 col-md-3"></div>
@@ -46,8 +48,10 @@ export default {};
   background: lightblue;
   height: 90vh;
 }
-input, select,button{
-    border: none;
-    border-radius: 5px;
+input,
+select,
+button {
+  border: none;
+  border-radius: 5px;
 }
 </style>
