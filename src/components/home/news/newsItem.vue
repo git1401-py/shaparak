@@ -3,22 +3,23 @@
     <div class="row">
       <div class="col-12 text-end">
         <h4>
-          {{ articel.title }}
+          {{ newsItem.title }}
         </h4>
 
         <p class="text-muted">
-          کد خبر:{{ articel.code }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ساعت
-          انتشار: {{ articel.time }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تاریخ
-          انتشار:{{ articel.date }}
+          کد خبر:{{ newsItem.code }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ساعت انتشار:
+          {{ newsItem.time }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تاریخ انتشار:{{
+            newsItem.date
+          }}
         </p>
       </div>
     </div>
     <hr />
     <div class="row p-5 align-items-center justify-content-center">
-      <img :src="articel.img_url" style="width: 80%" />
+      <img :src="newsItem.img_url" style="width: 80%" />
     </div>
     <div class="row my-5 text-secondary fs-5 text-end">
-      {{ articel.description }}
+      {{ newsItem.description }}
     </div>
     <hr />
     
@@ -27,7 +28,7 @@
         >دسته بندی:&nbsp;&nbsp;<span
           class="px-2 text-muted small fs-6"
           style="background: #ddd; width: 50px; border-radius: 5px"
-          >مقالات و پژوهش های حوزه پرداخت الکترونیک</span
+          >اخبار</span
         ></span
       >
     </div>
@@ -45,26 +46,22 @@
         @mouseleave="slidehover = false"
       >
         <swiper-slide
-          v-for="item in articels"
+          v-for="item in news"
           :key="item.id"
           :class="{ 'non-gray-fiter': slidehover }"
           class="mx-4 my-3"
         >
           <router-link
-                      :to="{
-                        name: 'articel',
-                        params: { id: item.id },
-                      }"
-                       class="text-center text-decoration-none text-dark">
+            :to="{
+              name: 'newsItem',
+              params: { id: item.id },
+            }"
+            class="text-center text-decoration-none text-dark"
+          >
             <div>
               <img
                 :src="item.img_url"
-                style="
-                  width: 180px;
-                  height: 130px;
-                  margin-right: -10px;
-                  border-radius: 5px;
-                "
+                style="width: 180px; height: 130px; border-radius: 5px"
               />
             </div>
 
@@ -124,22 +121,24 @@ export default {
     // const store = useStore();
     const route = useRoute();
     const store = useStore();
-    fetchArticels();
-    const articels = computed(() => store.getters["articels/allArticels"]);
-    async function fetchArticels() {
+
+    fetchnews();
+    const news = computed(() => store.getters["news/allNews"]);
+    const newsItem = ref({});
+
+    watch(news, () => {
+      newsItem.value = news.value[route.params.id];
+    });
+    async function fetchnews() {
       // loading.value = true;
-      await store.dispatch("articels/fetchAllArticels");
+      await store.dispatch("news/fetchAllNews");
       // loading.value = false;
     }
-    const articel = ref({});
 
-    watch(articels, () => {
-      articel.value = articels.value[route.params.id];
-    });
     const slidehover = ref(false);
     return {
-      articels,
-      articel,
+      news,
+      newsItem,
       slidehover,
       route,
     };

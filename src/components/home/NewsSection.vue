@@ -1,10 +1,17 @@
 <template>
-  <div class="container-fluid p-0" style="background: #eee;">
+  <div class="container-fluid p-0" style="background: #eee">
     <div class="row p-4">
       <div class="col-sm-12 col-md-6 col-lg-4 mb-sm-3 mt-md-3">
         <div class="card h-100">
           <div class="card-body position-relative">
-            <a href="" v-for="newe in newestNews" :key="newe.id">
+            <router-link
+              v-for="newe in newestNews"
+              :key="newe.id"
+              :to="{
+                name: 'newsItem',
+                params: { id: newe.id },
+              }"
+            >
               <img
                 class="card-img-top mt-3"
                 :src="newe.img_url"
@@ -30,7 +37,7 @@
                 </p>
                 <p class="text-muted m-0 p-0 pt-3 small">{{ newe.date }}</p>
               </div>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -47,8 +54,11 @@
                 @mouseout="sidebar1 = false"
                 class="mt-4 link_hover"
               >
-                <a
-                  href=""
+                <router-link
+                  :to="{
+                    name: 'newsItem',
+                    params: { id: threeRecently[0].id },
+                  }"
                   class="row a_hover"
                   :class="{ bg_hover: hover & !sidebar1 }"
                 >
@@ -65,15 +75,18 @@
                       {{ threeRecently[0].date }}
                     </p>
                   </div>
-                </a>
+                </router-link>
               </li>
               <li
                 @mousemove="sidebar2 = true"
                 @mouseout="sidebar2 = false"
                 class="mt-4 link_hover"
               >
-                <a
-                  href=""
+                <router-link
+                  :to="{
+                    name: 'newsItem',
+                    params: { id: threeRecently[1].id },
+                  }"
                   class="row a_hover"
                   :class="{ bg_hover: hover & !sidebar2 }"
                 >
@@ -90,15 +103,18 @@
                       {{ threeRecently[1].date }}
                     </p>
                   </div>
-                </a>
+                </router-link>
               </li>
               <li
                 @mousemove="sidebar3 = true"
                 @mouseout="sidebar3 = false"
                 class="mt-4 link_hover"
               >
-                <a
-                  href=""
+                <router-link
+                  :to="{
+                    name: 'newsItem',
+                    params: { id: threeRecently[2].id },
+                  }"
                   class="row a_hover"
                   :class="{ bg_hover: hover & !sidebar3 }"
                 >
@@ -115,7 +131,7 @@
                       {{ threeRecently[2].date }}
                     </p>
                   </div>
-                </a>
+                </router-link>
               </li>
             </ul>
           </div>
@@ -126,13 +142,19 @@
           <div class="card-body position-relative pb-0">
             <ul class="breifNews p-3 m-0 pb-0">
               <li class="p-0 m-0 w-100" v-for="newe in recently" :key="newe.id">
-                <a href="" class="breifNewsItem">
+                <router-link
+                  :to="{
+                    name: 'newsItem',
+                    params: { id: newe.id },
+                  }"
+                  class="breifNewsItem"
+                >
                   {{ newe.title }}
-                </a>
+                </router-link>
               </li>
               <li class="pt-3 m-0 w-100">
-                <a
-                  href=""
+                <router-link
+                  to="/arshiv"
                   class="d-flex align-items-center justify-content-end"
                 >
                   <div>
@@ -142,7 +164,7 @@
                   </div>
 
                   <span class="px-1 pb-0 m-0 arshiv">آرشیو اخبار</span>
-                </a>
+                </router-link>
               </li>
             </ul>
 

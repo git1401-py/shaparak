@@ -23,15 +23,6 @@
                       :to="{
                         name: 'articel',
                         params: { id: item.id },
-                        query: {
-                          id: item.id,
-                          img_url: item.img_url,
-                          title: item.title,
-                          date: item.date,
-                          code: item.code,
-                          txt: item.txt,
-                          description: item.description,
-                        },
                       }"
                       :articel="item"
                       class="row text-dark text-decoration-none"
@@ -71,18 +62,7 @@
                     <router-link
                       :to="{
                         name: 'articel',
-                        params: {
-                          id: item.id,
-                        },
-                        query: {
-                          id: item.id,
-                          img_url: item.img_url,
-                          title: item.title,
-                          date: item.date,
-                          code: item.code,
-                          txt: item.txt,
-                          description: item.description,
-                        },
+                        params: { id: item.id },
                       }"
                       class="row text-dark text-decoration-none"
                     >

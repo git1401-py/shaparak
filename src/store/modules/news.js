@@ -7,10 +7,14 @@ const news = {
     recently: [],
     newestNews: [],
     threeRecently: [{},{},{}],
+    leanth: 0,
   },
   getters: {
     allNews(state) {
       return state.news;
+    },
+    leanthNews(state) {
+      return state.leanth;
     },
     recently(state) {
       return state.recently;
@@ -25,6 +29,9 @@ const news = {
   mutations: {
     setnews(state, news) {
       state.news = news;
+    },
+    setleanth(state, news) {
+      state.leanth = news.leanth;
     },
     setresentnews(state, news) {
       state.recently = news;
@@ -48,6 +55,7 @@ const news = {
         });
 
       commit("setnews", response.data);
+      commit("setleanth", response.data);
     },
     async fetchNews({ commit }) {
       await axios

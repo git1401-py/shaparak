@@ -14,7 +14,7 @@ import Yar from "../components/home/mainSectionParts/Componies/Yar.vue";
 
 import Accepteds from "../components/home/mainSectionParts/Accepteds.vue";
 import Articels from "../components/home/mainSectionParts/Articels.vue";
-import Articel from "../components/home/mainSectionParts/Articels/Articel.vue";
+import articel from "../components/home/mainSectionParts/Articels/Articel.vue";
 
 // Network
 import Network from "../components/home/mainSectionParts/Network.vue";
@@ -31,6 +31,9 @@ import Reports from "../components/home/mainSectionParts/Reports.vue";
 import Employ from "../components/epmloye/Employ.vue";
 import CodeGuid from "../components/home/mainSectionParts/RegistrationCodeGuid.vue";
 
+import arshiv from "../components/home/news/ArshiveNews.vue";
+import newsItem from "../components/home/news/newsItem.vue";
+
 const routes = [
   {
     path: "/about",
@@ -41,6 +44,8 @@ const routes = [
   { path: "/contactus", name: "Contactus", component: Contactus },
   { path: "/sugestion", name: "Sugestion", component: Sugestion },
   { path: "/login", name: "login", component: login },
+  { path: "/arshiv", name: "arshiv", component: arshiv },
+  { path: "/newsItem", name: "newsItem", component: newsItem },
 
   // *******Main section parts********
   {
@@ -72,7 +77,7 @@ const routes = [
     { path: "/store", name: "store", component: store },
   ], },
   { path: "/articels", name: "articels", component: Articels },
-  { path: "/articels/:id", name: "articel", component: Articel },
+  { path: "/articel", name: "articel", component: articel },
 
   // Employ Page
   { path: "/employ", name: "employ", component: Employ },

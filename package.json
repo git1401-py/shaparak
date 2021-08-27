@@ -15,6 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
     "@googlemaps/js-api-loader": "^1.12.2",
+    "@ocrv/vue-tailwind-pagination": "^0.0.4",
     "animate.css": "^4.1.1",
     "animate.css-react": "^1.1.0",
     "axios": "^0.21.1",
