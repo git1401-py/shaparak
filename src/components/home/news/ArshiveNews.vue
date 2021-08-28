@@ -7,8 +7,8 @@
     <div class="row" style="font-size: 12px">
       
 
-      <div class="col-sm-12 col-md-6">
-        <div class="row p-4 mb-3" style="background: lightgray">
+      <div class="col-sm-12 col-md-6" style="background:lightgray;">
+        <div class="row p-4 mb-3 h-100" style="background: lightgray">
           <div class="card">
             <div
               class="card-body"
@@ -20,8 +20,8 @@
                   <li
                     :class="{ 'non-gray-fiter': slidehover }"
                     v-if="
-                      (currentPage - 1) * (perPage/3) <= item.id &&
-                      item.id <= currentPage * (perPage/3) - 1
+                      (currentPage - 1) * (perPage) <= item.id &&
+                      item.id <= currentPage * (perPage) - 5
                     "
                   >
                     <router-link
@@ -50,7 +50,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6">
+      
+      <div class="col-sm-12 col-md-6" style="background:lightgray;">
         <div class="row p-4 mb-3 h-100" style="background: lightgray">
           <div class="card">
             <div
@@ -63,54 +64,9 @@
                   <li
                     :class="{ 'non-gray-fiter': slidehover }"
                     v-if="
-                      currentPage * (perPage/3)  <= item.id &&
-                      item.id <= currentPage * (perPage/2) - 1
-                    "
-                  >
-                  >
-                    <router-link
-                      :to="{
-                        name: 'newsItem',
-                        params: { id: item.id },
-                      }"
-                      class="row text-dark text-decoration-none"
-                    >
-                      <div class="col-4">
-                        <img :src="item.img_url" style="width: 80px" alt="" />
-                      </div>
-                      <div class="col-8 px-4 text-end">
-                        <h6>{{ item.title }}</h6>
-                        <p class="text-muted small fw-lighter">
-                          {{ item.date }}/{{ item.code }}/{{ item.txt }}
-                        </p>
-                      </div>
-                    </router-link>
-                    <div></div>
-                  </li>
-                </template>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6">
-        <div class="row p-4 mb-3 h-100" style="background: lightgray">
-          <div class="card">
-            <div
-              class="card-body"
-              @mouseenter="slidehover = true"
-              @mouseleave="slidehover = false"
-            >
-              <ul class="p-0 m-0 list-unstyled">
-                <template v-for="item in news" :key="item.id">
-                  <li
-                    :class="{ 'non-gray-fiter': slidehover }"
-                    v-if="
-                      currentPage * (perPage/2)  <= item.id &&
-                      item.id <= currentPage * (perPage) - 1
-                    "
-                  >
-                  >
+                      currentPage * (perPage)-4  <= item.id &&
+                      item.id <= currentPage * perPage - 1
+                    ">
                     <router-link
                       :to="{
                         name: 'newsItem',
@@ -160,7 +116,7 @@ export default {
   setup() {
     const store = useStore();
     const currentPage = ref(1);
-    const perPage = ref(12);
+    const perPage = ref(8);
 
     fetchnews();
     const news = computed(() => store.getters["news/allNews"]);
